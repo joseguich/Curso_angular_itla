@@ -1,0 +1,13 @@
+<div class="container mx-auto">
+
+    <children-message
+        class="text-2xl text-center font-bold"
+        message="Hola, bienvenido a Angular!"
+    ></children-message>
+    <children-alert-button (alertMessage)="showAlert($event)"></children-alert-button>
+    <children-color-box></children-color-box>
+    <children-counter
+        [count]="count"
+        (onIncrease)="counterIncrease($event)"
+    ></children-counter>
+</div>

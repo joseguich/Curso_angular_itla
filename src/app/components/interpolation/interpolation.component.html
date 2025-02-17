@@ -1,0 +1,63 @@
+<div class="text-gray-800 container mx-auto">
+
+    <h2 class="text-center font-bold text-2xl mt-4">Ejercicios de interpolación</h2>
+    <hr class=my-4>
+</div>
+<div class="text-gray-800 max-w-md mx-auto">
+    <div class=" space-y-4 mt-2 ml-4 p-6 shadow-xl shadow-gray-300  ">
+        <p class="font-bold">1.
+           {{welcomenMessage}}</p>
+        <div>
+            <h3 class="font-bold">2. Información</h3>
+            <div class="ml-12">
+                <p>
+                    <span class="font-bold">Nombre:</span>
+                    {{person.name }}
+                </p>
+                <p>
+                    <span class="font-bold">Edad:</span>
+                    {{person.age}} años
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="font-bold">3. Interpolación con Expresiones</h3>
+            <div class="ml-12 flex">
+                <h4 class="font-bold">Resta:</h4>
+                <p class="ml-2">Resultado {{12 - 20}}</p>
+            </div>
+            <div class="ml-12 flex">
+                <h4 class="font-bold">Multiplicación:</h4>
+                <p class="ml-2">Resultado {{8 * 4}}</p>
+            </div>
+        </div>
+        <div>
+            <h3 class="font-bold">4. Interpolación con Métodos</h3>
+            <div class="ml-12">
+                <p class="font-bold">
+                    El área del circulo es:
+                    <span class="font-normal">{{calculateArea(radius)}}</span>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3 class="font-bold">5. Interpolación con Condiciones</h3>
+            <div class="ml-12">
+                <p class="font-normal">
+                    {{isLoggedin ? 'Bienvenido de nuevo' : 'Por fvaor, inicia sesión'}}
+                </p>
+            </div>
+        </div>
+        <div>
+            <h3 class="font-bold">6. Interpolación con Pipe</h3>
+            <div class="ml-12">
+                <p class="font-bold">
+                    Fecha actual:
+                    <span class="font-normal">{{currentDate | date:'MMM d, y'}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

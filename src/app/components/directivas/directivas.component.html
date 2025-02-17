@@ -1,0 +1,43 @@
+<div class="text-black">
+
+   @if(isVisible){
+
+      <div class="text-black mt-10 text-center font-bold animate__animated animate__bounce">
+          <h2>¡Bienvenido al curso de Angular!</h2>
+      </div>
+   }
+   
+   <div class="flex justify-center items-center gap-3 mt-5">
+      <button (click)="showMessage(true)" class="bg-blue-800 text-white p-2 w-36 rounded-xl cursor-pointer font-bold hover:bg-blue-700 hover:scale-95 transition-all duration-300 " >Mostrar</button>
+      <button (click)="showMessage(false)" class="bg-red-800 text-white p-2 w-36 rounded-xl cursor-pointer font-bold hover:bg-red-700 hover:scale-95 transition-all duration-300 " >Ocultar</button>
+   </div>
+   
+   <div class="flex container mx-auto gap-10">
+
+      <div>
+         <h4 class="font-bold">Frutas</h4>
+         <hr>
+         <ul class="mt-2">
+         
+            @for (fruit of fruits; track $index) {
+               <li>{{$index + 1}} - {{fruit | titlecase}}</li>
+            }
+         </ul>
+      </div>
+
+      <div>
+         <h4 class="font-bold">Agregar Fruta</h4>
+         <form (ngSubmit)="addFruits()">
+            <input type="text" [(ngModel)]="nameFruit" name="name" class="bg-gray-100 border-[1px] border-gray-500 outline-0 mt-2 w-72 px-2 py-2 rounded-lg focus:outline-blue-600 hover:focus:outline-1 transition-all duration-300" placeholder="Añadir fruta">
+            <input type="submit" class="ml-2 px-8 py-2 rounded-xl font-bold cursor-pointer transition-all duration-500 hover:text-white hover:bg-indigo-600  "value="Agregar">
+         </form>
+         @if(alert){
+
+            <p class="text-red-200 bg-red-600 border-red-400 rounded-md py-2 my-2 text-center max-w-72">{{alert}}</p>
+         }
+      </div>
+
+   </div>
+
+
+</div>

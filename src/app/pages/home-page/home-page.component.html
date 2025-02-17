@@ -1,0 +1,13 @@
+<div class="flex flex-col justify-center items-center h-96">
+    <h2 class="capitalize font-bold text-4xl text-center mt-10 bg-cyan-600 p-12 rounded-2xl ">My main component</h2>
+
+    @if(rest > 9){
+        <p class="text-black text-2xl font-black">
+            Resultado de la resta:
+            <span class="font-normal text-3xl">{{opRest(40, 30)}}</span>
+        </p>
+    }@else {
+        <p class="text-black">No es mayor</p>
+    }
+    
+</div>

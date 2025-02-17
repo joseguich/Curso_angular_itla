@@ -1,0 +1,30 @@
+<div class="container mx-auto mt-10">
+    <table class="table-fixed w-full">
+        <thead>
+            <tr class="border bg-indigo-500 text-white">
+                <th class="py-2 font-bold">#</th>
+                <th class="py-2 font-bold">Nombre</th>
+                <th class="py-2 font-bold">Edad</th>
+                <th class="py-2 font-bold">Activo</th>
+            </tr>
+        </thead>
+        <tbody>
+           @for (list of listUser; track $index) {
+               <tr class="bg-gray-700 border text-center cursor-pointer hover:bg-gray-600 transition-all duration-500">
+               <td class="py-2">{{$index + 1}}</td>
+               <td class="py-2">{{list.nombre}}</td>
+               <td class="py-2">{{list.edad}} años</td>
+               @if(list.activo === true) {
+                  <td class="py-2">
+                     <span class="bg-green-400 px-4 py-1 rounded-2xl">Activo</span>
+                  </td>
+               }@else{
+                  <td class="py-2">
+                     <span class="bg-red-400 px-4 py-1 rounded-2xl">Inactivo</span>
+                  </td>
+               }
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
