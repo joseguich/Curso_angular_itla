@@ -50,4 +50,14 @@ export const routes: Routes = [
         (c) => c.ScoreComponent
       ),
   },
+  {
+    path: 'parent',
+    loadComponent: () =>
+      import('./components/output_input/parent/parent.component').then(c => c.ParentComponent)
+  },
+  {
+    path: 'pipes',
+    loadComponent: () =>
+      import('./components/pipes/pipes.component').then(c => c.PipesComponent)
+  },
 ];

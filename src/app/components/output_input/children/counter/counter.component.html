@@ -3,13 +3,13 @@
     <h3 class="text-6xl">{{count}}</h3>
     @if(count > 0){
 
-       <p class="font-bold bg-green-500 rounded-2xl px-4 py-1 mt-2">Contador</p>
+       <p class="font-bold bg-green-500 rounded-2xl px-4 py-1 mt-2 text-white">Contador</p>
       }@else {
          
-         <p class="font-bold bg-red-500 rounded-2xl px-4 py-1 mt-2">Sin Contar</p>
+         <p class="font-bold bg-red-500 rounded-2xl px-4 py-1 mt-2 text-white">Sin Contar</p>
     }
 
-    <div class="mt-10 flex gap-4">
+    <div class="mt-10 flex gap-4 text-white">
         <button
             class="bg-red-500 py-2 px-4 rounded-lg cursor-pointer hover:bg-red-600 transition-all duration-500"
             (click)="counterIncrease(-1)"

@@ -4,9 +4,10 @@
         class="text-2xl text-center font-bold"
         message="Hola, bienvenido a Angular!"
     ></children-message>
-    <children-alert-button (alertMessage)="showAlert($event)"></children-alert-button>
-    <children-color-box [bgColor]="'bg-red-400'"></children-color-box>
+    <children-alert-button class="text-white" (alertMessage)="showAlert($event)"></children-alert-button>
+    <children-color-box class="text-white" [bgColor]="'bg-red-400'"></children-color-box>
     <children-counter
+        
         [count]="count"
         (onIncrease)="counterIncrease($event)"
     ></children-counter>
