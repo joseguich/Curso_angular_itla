@@ -60,4 +60,14 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pipes/pipes.component').then(c => c.PipesComponent)
   },
+
+  {
+    path: "login",
+    loadComponent: ()=> import('./components/login/login.component').then(c => c.LoginComponent)
+  },
+
+  {
+    path: "**",
+    redirectTo: "login"
+  }
 ];
